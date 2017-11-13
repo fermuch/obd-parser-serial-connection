@@ -63,7 +63,7 @@ module.exports = function (opts) {
         });
 
         // Create our connection
-        conn = new serialport.SerialPort(opts.serialPath, opts.serialOpts);
+        conn = new serialport(opts.serialPath, opts.serialOpts);
 
         // Connect to the serial port
         conn.on('open', function () {
